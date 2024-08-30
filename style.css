@@ -1,0 +1,87 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    position: relative;
+}
+
+#game-menu, #game-container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #007bff;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#game-container {
+    display: none;
+}
+
+#ticTacToe, #guessNumber, #rockPaperScissors, #numberGuessing, #simpleQuiz {
+    display: none;
+}
+
+.ttt-cell {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    border: 3px solid #333;
+    font-size: 3em;
+    line-height: 80px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ttt-cell:nth-child(3n) {
+    border-right: none;
+}
+
+.ttt-cell:nth-last-child(-n+3) {
+    border-bottom: none;
+}
+
+.ttt-cell:hover {
+    background-color: #ddd;
+}
+
+#watermark {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    z-index: 1000;
+}
